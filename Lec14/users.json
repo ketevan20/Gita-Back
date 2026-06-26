@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Giorgi",
+    "age": 24,
+    "email": "giorgi@example.com",
+    "city": "Tbilisi"
+  },
+  {
+    "id": 2,
+    "name": "Nino",
+    "age": 21,
+    "email": "nino@example.com",
+    "city": "Kutaisi"
+  },
+  {
+    "id": 3,
+    "name": "Luka",
+    "age": 27,
+    "email": "luka@example.com",
+    "city": "Batumi"
+  },
+  {
+    "id": 4,
+    "name": "Ana",
+    "age": 23,
+    "email": "ana@example.com",
+    "city": "Rustavi"
+  },
+  {
+    "id": 5,
+    "name": "Saba",
+    "age": 29,
+    "email": "saba@example.com",
+    "city": "Zugdidi"
+  },
+  {
+    "id": 6,
+    "name": "Mariam",
+    "age": 22,
+    "email": "mariam@example.com",
+    "city": "Gori"
+  },
+  {
+    "id": 7,
+    "name": "Dato",
+    "age": 31,
+    "email": "dato@example.com",
+    "city": "Telavi"
+  },
+  {
+    "id": 8,
+    "name": "Tamar",
+    "age": 26,
+    "email": "tamar@example.com",
+    "city": "Poti"
+  },
+  {
+    "id": 9,
+    "name": "Levan",
+    "age": 28,
+    "email": "levan@example.com",
+    "city": "Borjomi"
+  },
+  {
+    "id": 10,
+    "name": "Elene",
+    "age": 20,
+    "email": "elene@example.com",
+    "city": "Mtskheta"
+  }
+]

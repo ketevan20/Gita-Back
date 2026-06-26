@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "title": "Getting Started with JavaScript",
+    "body": "JavaScript is one of the most popular programming languages for web development."
+  },
+  {
+    "id": 2,
+    "userId": 2,
+    "title": "Learning Node.js",
+    "body": "Node.js allows developers to run JavaScript outside the browser."
+  },
+  {
+    "id": 3,
+    "userId": 3,
+    "title": "My First HTML Page",
+    "body": "Creating a simple HTML page is the first step in web development."
+  },
+  {
+    "id": 4,
+    "userId": 1,
+    "title": "Understanding CSS Flexbox",
+    "body": "Flexbox makes it easy to create responsive layouts."
+  },
+  {
+    "id": 5,
+    "userId": 4,
+    "title": "Why I Love Programming",
+    "body": "Programming helps solve real-world problems with creative solutions."
+  },
+  {
+    "id": 6,
+    "userId": 5,
+    "title": "Introduction to Python",
+    "body": "Python is known for its simple syntax and readability."
+  },
+  {
+    "id": 7,
+    "userId": 6,
+    "title": "Working with JSON",
+    "body": "JSON is a lightweight format for exchanging data between applications."
+  },
+  {
+    "id": 8,
+    "userId": 7,
+    "title": "Frontend vs Backend",
+    "body": "Frontend focuses on the user interface, while backend handles business logic."
+  },
+  {
+    "id": 9,
+    "userId": 8,
+    "title": "Git Basics",
+    "body": "Git helps developers track changes and collaborate on projects."
+  },
+  {
+    "id": 10,
+    "userId": 2,
+    "title": "Asynchronous JavaScript",
+    "body": "Promises and async/await simplify asynchronous programming."
+  },
+  {
+    "id": 11,
+    "userId": 9,
+    "title": "REST APIs Explained",
+    "body": "REST APIs enable communication between clients and servers."
+  },
+  {
+    "id": 12,
+    "userId": 10,
+    "title": "My Coding Journey",
+    "body": "I started coding with HTML and gradually learned JavaScript and Node.js."
+  }
+]
