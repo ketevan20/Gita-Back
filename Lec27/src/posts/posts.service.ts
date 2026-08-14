@@ -1,26 +1,41 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
+import { InjectModel } from '@nestjs/mongoose';
+import { Post } from './schema/post.schema';
+import { isValidObjectId, Model } from 'mongoose';
 
 @Injectable()
 export class PostsService {
-  create(createPostDto: CreatePostDto) {
-    return 'This action adds a new post';
+  constructor(@InjectModel(Post.name) private postsModel: Model<any>) { }
+
+  async create(userId: string, createPostDto: CreatePostDto) {
+    const createUser = await this.postsModel.create({ ...createPostDto, user: userId })
+    return createUser
   }
 
-  findAll() {
-    return `This action returns all posts`;
+  async findAll() {
+    return this.postsModel.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} post`;
+  async findOne(id: string) {
+    if (!isValidObjectId(id)) throw new BadRequestException()
+    const findPostById = await this.postsModel.findById(id)
+    if (!findPostById) throw new BadRequestException()
+    return findPostById;
   }
 
-  update(id: number, updatePostDto: UpdatePostDto) {
-    return `This action updates a #${id} post`;
+  async update(id: string, updatePostDto: UpdatePostDto) {
+    if (!isValidObjectId(id)) throw new BadRequestException()
+    const updatePostById = await this.postsModel.findByIdAndUpdate(id, updatePostDto, { new: true })
+    if (!updatePostById) throw new BadRequestException()
+    return updatePostById;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} post`;
+  async remove(id: string) {
+    if (!isValidObjectId(id)) throw new BadRequestException()
+    const removeById = await this.postsModel.findByIdAndDelete(id)
+    if (!removeById) throw new BadRequestException()
+    return removeById;
   }
 }

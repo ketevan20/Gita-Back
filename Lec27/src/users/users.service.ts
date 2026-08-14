@@ -16,7 +16,7 @@ export class UsersService {
     return newUser;
   }
 
-  findAll() {
+  async findAll() {
     return this.userModel.find();
   }
 
@@ -29,7 +29,7 @@ export class UsersService {
 
   async update(id: string, updateUserDto: UpdateUserDto) {
     if(!isValidObjectId(id)) throw new BadRequestException()
-    const updateUserById = await this.userModel.findByIdAndUpdate(updateUserDto, {new: true})
+    const updateUserById = await this.userModel.findByIdAndUpdate(id, updateUserDto, {new: true})
     if(!updateUserById) throw new BadRequestException()
     return updateUserById;
   }
