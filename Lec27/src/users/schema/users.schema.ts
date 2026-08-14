@@ -12,5 +12,4 @@ export class User {
     age!: number
 }
 
-// export const userSchema = SchemaFactory.createForClass(User)
 export const userSchema = SchemaFactory.createForClass(User)

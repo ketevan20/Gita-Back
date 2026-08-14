@@ -28,9 +28,7 @@ export class UsersService {
   }
 
   async update(id: string, updateUserDto: UpdateUserDto) {
-    console.log("axla aqane")
     if(!isValidObjectId(id)) throw new BadRequestException()
-    console.log("aqane var")
     const updateUserById = await this.userModel.findByIdAndUpdate(updateUserDto, {new: true})
     if(!updateUserById) throw new BadRequestException()
     return updateUserById;
