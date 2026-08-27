@@ -16,7 +16,7 @@ export class UsersService {
     return newUser;
   }
 
-  async findAll() {
+  findAll() {
     return this.userModel.find();
   }
 
@@ -39,5 +39,10 @@ export class UsersService {
     const removeUserById = await this.userModel.findByIdAndDelete(id)
     if(!removeUserById) throw new BadRequestException()
     return removeUserById;
+  }
+
+  async addPost(userId, postId) {
+    const updateUser = await this.userModel.findByIdAndUpdate(userId, {$push: {posts: postId}})
+    return updateUser
   }
 }

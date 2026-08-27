@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Req, UseGuards } fro
 import { PostsService } from './posts.service';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
-import { HasUserIDGuard } from './guards/hasUserIdGuard';
+import { HasUserIDGuard } from './guards/hasUserIDGuard';
 
 @Controller('posts')
 export class PostsController {
@@ -17,7 +17,7 @@ export class PostsController {
 
   @Get()
   findAll() {
-    return this.postsService.findAll();
+    return this.postsService.findAll().populate({path: 'user'});
   }
 
   @Get(':id')
