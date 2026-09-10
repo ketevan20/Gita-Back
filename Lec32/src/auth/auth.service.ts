@@ -22,7 +22,8 @@ export class AuthService {
         const isEqualPass = await bcrypt.compare(signInDto.password,exsisitingUser.password)
         if(!isEqualPass) throw new BadGatewayException("invalid credentials")
         const payLoad = {
-            userId:exsisitingUser._id
+            userId:exsisitingUser._id,
+            role: exsisitingUser.role
         }
         const accessToken = await this.jwtService.sign(payLoad,{expiresIn:"1hr"})
         return accessToken
